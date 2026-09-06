@@ -1,7 +1,17 @@
 {
+  "scripts": {
+    "dev": "npm run build:css && vite",
+    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./public/css/output.css --minify",
+    "build": "npm run build:css && vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
-    "aos": "^2.3.4",
-    "tailwindcss": "^4.1.17"
+    "@vitejs/plugin-react": "^6.1.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.3",
+    "tailwindcss": "^4.1.17",
+    "vite": "^8.2.2"
   }
 }

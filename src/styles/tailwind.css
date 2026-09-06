@@ -26,9 +26,9 @@ html {
   backdrop-filter: blur(10px);
 }
 
-/* Gradien khusus untuk bagian Hero */
-.hero-gradient {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+/* Surface gelap yang sederhana untuk CTA */
+.surface-dark {
+  background: var(--color-primary);
 }
 
 /* Bayangan Kartu */
