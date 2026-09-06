@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* 1. Definisi Tema Khusus (Custom Theme Definitions) */
+/* Ini akan menghasilkan utilitas seperti text-primary, bg-accent, dan font-sans */
+@theme {
+  --color-primary: #1E40AF;
+  --color-accent: #0D9488;
+
+  --font-sans: 'Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif';
+}
+
+/* 2. Pengaturan Dasar (Base Styles) */
+body {
+  font-family: var(--font-sans);
+}
+
+html { 
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* 3. Utilitas Komponen/Kustom (Custom Component/Utility Classes) */
+
+/* Navigasi dengan efek kaca (glass effect) */
+.nav-blur {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Gradien khusus untuk bagian Hero */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+}
+
+/* Bayangan Kartu */
+.card-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Efek Hover Kartu */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Animasi Menu Mobile */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.mobile-menu.open {
+  max-height: 300px;
+}
+
+/* Gambar Responsif */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.js-hidden {
+  display: none !important;
+}
+
+
+/* 4. Konsolidasi Media Query (section-padding) */
+
+/* Default (mobile first): padding 1rem */
+.section-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) { /* sm: */
+  .section-padding {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) { /* lg: */
+  .section-padding {
+    padding-left: 0; /* Menghapus padding di layar besar (seperti di kontainer yang sudah terpusat) */
+    padding-right: 0;
+  }
+}
+
+/* 5. Kelas Kustom Mobile (Mobile-specific Utilities) */
+/* Karena Anda sudah menggunakan Mobile-First approach (padding-left: 1rem), saya hanya menyisakan kelas yang benar-benar Mobile-Specific di bawah max-width 768px */
+
+@media (max-width: 768px) {
+  .mobile-text-center {
+    text-align: center;
+  }
+  
+  .mobile-stack {
+    flex-direction: column;
+  }
+  
+  .mobile-full-width {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sasak Tour - Jelajah desa adat Sade, Sukarare, dan Kuta Lombok bersama Afwa Transport">
+  <meta name="keywords" content="Sasak Tour, Sade Village, Sukarare, Kuta Lombok, budaya Sasak">
+  <meta name="author" content="Afwa Transport">
+  <title>Sasak Tour - Afwa Transport</title>
+
+  <!-- Tailwind & Fonts -->
+  <link rel="stylesheet" href="../css/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body
+  class="font-sans bg-slate-50 text-slate-800"
+  x-data="{ mobileOpen: false, activeTab: 'overview' }"
+>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-slate-200 shadow-sm">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+
+          <!-- Logo -->
+          <a href="../index.html" class="flex items-center gap-2">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center overflow-hidden">
+              <img src="../img/logo.png" alt="Logo Afwa Transport" class="w-full h-full object-contain">
+            </div>
+            <span class="text-lg font-bold text-slate-900">Afwa Transport</span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+            <a href="../index.html" class="hover:text-primary transition">Home</a>
+            <a href="../index.html#destinations" class="hover:text-primary transition">Destinasi</a>
+            <a href="../index.html#rental" class="hover:text-primary transition">Sewa Mobil</a>
+            <a href="../index.html#about" class="hover:text-primary transition">Tentang</a>
+            <a href="../index.html#contact" class="hover:text-primary transition">Kontak</a>
+          </div>
+
+          <!-- Desktop CTA -->
+          <div class="hidden md:flex">
+            <a
+              href="https://wa.me/+6281936800190?text=Halo%20Afwa%20Transport"
+              class="inline-flex items-center gap-2 bg-primary text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-slate-900 transition shadow-md"
+            >
+              <i class="fab fa-whatsapp text-xs"></i>
+              Chat Admin
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            @click="mobileOpen = !mobileOpen"
+            class="md:hidden p-2 rounded-lg hover:bg-slate-100"
+          >
+            <i class="fas fa-bars text-slate-700" x-show="!mobileOpen"></i>
+            <i class="fas fa-times text-slate-700" x-show="mobileOpen"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div
+          x-show="mobileOpen"
+          x-transition
+          class="md:hidden pb-4 space-y-2 bg-white rounded-lg mt-2 shadow-lg"
+        >
+          <a
+            href="../index.html"
+            class="block py-3 px-4 text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md"
+            @click="mobileOpen = false"
+          >
+            Home
+          </a>
+          <a
+            href="../index.html#destinations"
+            class="block py-3 px-4 text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md"
+            @click="mobileOpen = false"
+          >
+            Destinasi
+          </a>
+          <a
+            href="../index.html#rental"
+            class="block py-3 px-4 text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md"
+            @click="mobileOpen = false"
+          >
+            Sewa Mobil
+          </a>
+          <a
+            href="../index.html#about"
+            class="block py-3 px-4 text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md"
+            @click="mobileOpen = false"
+          >
+            Tentang
+          </a>
+          <a
+            href="../index.html#contact"
+            class="block py-3 px-4 text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md"
+            @click="mobileOpen = false"
+          >
+            Kontak
+          </a>
+          <div class="pt-2 px-4">
+            <a
+              href="https://wa.me/+6281936800190?text=Halo%20Afwa%20Transport"
+              class="inline-flex items-center justify-center gap-2 bg-primary text-white text-sm font-semibold px-4 py-3 rounded-lg w-full"
+              @click="mobileOpen = false"
+            >
+              <i class="fab fa-whatsapp text-xs"></i>
+              Chat Admin
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="pt-28 pb-6 bg-white section-padding">
+    <div class="max-w-6xl mx-auto">
+      <nav class="flex text-sm text-slate-500 mb-4">
+        <a href="../index.html" class="hover:text-primary">Home</a>
+        <span class="mx-2">/</span>
+        <a href="../index.html#destinations" class="hover:text-primary">Destinasi</a>
+        <span class="mx-2">/</span>
+        <span class="text-slate-700 font-medium">Sasak Tour</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Detail -->
+  <section class="py-8 bg-white">
+    <div class="max-w-6xl mx-auto section-padding">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <!-- Gallery -->
+        <div class="space-y-4">
+          <div class="rounded-2xl overflow-hidden">
+            <!-- Ganti path gambar ini sesuai file kamu -->
+            <img
+              src="../img/Sade.jpg"
+              alt="Sasak Tour - Sade Village, Sukarare, Kuta Lombok"
+              class="w-full h-80 md:h-96 object-cover rounded-2xl"
+            >
+          </div>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="rounded-xl overflow-hidden cursor-pointer">
+              <img
+                src="../img/sasak_tour/Sade.jpg"
+                alt="Sade Village"
+                class="w-full h-24 object-cover hover:opacity-80 transition"
+              >
+            </div>
+            <div class="rounded-xl overflow-hidden cursor-pointer">
+              <img
+                src="../img/sasak_tour/Sukarara_village.jpg"
+                alt="Sukarare Village"
+                class="w-full h-24 object-cover hover:opacity-80 transition"
+              >
+            </div>
+            <div class="rounded-xl overflow-hidden cursor-pointer">
+              <img
+                src="../img/sasak_tour/kuta.jpg"
+                alt="Kuta Lombok Area"
+                class="w-full h-24 object-cover hover:opacity-80 transition"
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="space-y-6">
+          <div>
+            <span class="inline-flex items-center gap-2 bg-orange-50 text-orange-700 text-xs font-medium px-3 py-1 rounded-full">
+              <i class="fas fa-landmark"></i>
+              Budaya & Sightseeing
+            </span>
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mt-3">
+              Sasak Tour
+            </h1>
+            <p class="text-slate-600 mt-2">
+              One-day trip untuk mengenal budaya suku Sasak di Sade dan Sukarare, sekaligus menikmati
+              panorama pantai Kuta Lombok yang terkenal dengan bukit dan pasir putihnya.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-4 text-sm text-slate-600">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-clock text-primary"></i>
+              <span>Full Day (08:00 - 17:00)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-users text-primary"></i>
+              <span>Private 2 orang</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-map-location-dot text-primary"></i>
+              <span>Sade • Sukarare • Kuta Area</span>
+            </div>
+          </div>
+
+          <!-- Pricing & includes -->
+          <div id="booking" class="bg-slate-50 rounded-2xl p-6 space-y-4 card-shadow">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-slate-900">900.000</span>
+                <span class="text-sm text-slate-500"> / paket (2 orang)</span>
+              </div>
+              <span class="text-xs bg-emerald-500 text-white px-2 py-1 rounded-md">
+                VALUE DEAL
+              </span>
+            </div>
+
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check text-emerald-500"></i>
+                <span class="text-sm">Transport AC (hotel ⇄ semua destinasi)</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check text-emerald-500"></i>
+                <span class="text-sm">Biaya masuk objek wisata</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check text-emerald-500"></i>
+                <span class="text-sm">Local guide di desa adat</span>
+              </div>
+            </div>
+
+            <!-- Booking CTA -->
+            <div class="space-y-4 pt-4">
+              <a
+                href="https://wa.me/+6281936800190?text=Halo%20Afwa%20Transport,%20saya%20ingin%20booking%20Sasak%20Tour%20(Sade-Sukarare-Kuta)."
+                target="_blank"
+                class="w-full bg-primary text-white font-semibold py-3 rounded-lg hover:bg-slate-900 transition shadow-md flex items-center justify-center gap-2 text-sm"
+              >
+                <i class="fas fa-calendar-check"></i>
+                Pesan via WhatsApp
+              </a>
+              <p class="text-xs text-slate-500 text-center">
+                Konfirmasi instan • Free cancellation 24 jam
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabs Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto section-padding">
+
+      <!-- Tabs -->
+      <div class="border-b border-slate-200 mb-8">
+        <div class="flex space-x-8 overflow-x-auto">
+          <button
+            @click="activeTab = 'overview'"
+            class="pb-4 px-1 font-medium text-sm border-b-2 transition whitespace-nowrap"
+            :class="activeTab === 'overview'
+              ? 'border-primary text-primary'
+              : 'border-transparent text-slate-500 hover:text-slate-700'"
+          >
+            Overview
+          </button>
+          <button
+            @click="activeTab = 'itinerary'"
+            class="pb-4 px-1 font-medium text-sm border-b-2 transition whitespace-nowrap"
+            :class="activeTab === 'itinerary'
+              ? 'border-primary text-primary'
+              : 'border-transparent text-slate-500 hover:text-slate-700'"
+          >
+            Itinerary
+          </button>
+          <button
+            @click="activeTab = 'included'"
+            class="pb-4 px-1 font-medium text-sm border-b-2 transition whitespace-nowrap"
+            :class="activeTab === 'included'
+              ? 'border-primary text-primary'
+              : 'border-transparent text-slate-500 hover:text-slate-700'"
+          >
+            Yang Termasuk
+          </button>
+          <button
+            @click="activeTab = 'reviews'"
+            class="pb-4 px-1 font-medium text-sm border-b-2 transition whitespace-nowrap"
+            :class="activeTab === 'reviews'
+              ? 'border-primary text-primary'
+              : 'border-transparent text-slate-500 hover:text-slate-700'"
+          >
+            Reviews
+          </button>
+        </div>
+      </div>
+
+      <!-- Overview -->
+      <div x-show="activeTab === 'overview'" class="space-y-6">
+        <h3 class="text-xl font-bold text-slate-900">Tentang Sasak Tour</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Sasak Tour dirancang untuk kamu yang ingin mengenal Lombok lebih dalam, bukan hanya pantainya.
+          Dalam satu hari, kamu akan mengunjungi desa adat Sade, sentra tenun Sukarare, dan area Kuta
+          Lombok yang dikelilingi bukit dan pantai cantik.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <h4 class="font-semibold text-slate-900">Highlight Perjalanan</h4>
+            <ul class="space-y-3 text-slate-600">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-house-chimney text-primary mt-1"></i>
+                <span>Melihat rumah tradisional suku Sasak di Desa Sade</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-swatchbook text-primary mt-1"></i>
+                <span>Melihat proses tenun songket di Sukarare Village</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-umbrella-beach text-primary mt-1"></i>
+                <span>Menikmati pantai Kuta &amp; bukit di sekitarnya (Tanjung Aan / Bukit Merese opsional)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-camera text-primary mt-1"></i>
+                <span>Banyak spot foto budaya lokal dan pemandangan alam</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-4">
+            <h4 class="font-semibold text-slate-900">Untuk Siapa Paket Ini?</h4>
+            <ul class="space-y-3 text-slate-600">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-user-graduate text-primary mt-1"></i>
+                <span>Traveler yang ingin belajar budaya, bukan cuma foto di pantai</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-family text-primary mt-1"></i>
+                <span>Cocok untuk keluarga, pasangan, maupun group kecil</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-wallet text-primary mt-1"></i>
+                <span>Budget-friendly tapi rute tetap padat dan rapi</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-language text-primary mt-1"></i>
+                <span>Local guide bisa bantu jelaskan sejarah &amp; cerita unik suku Sasak</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Itinerary -->
+      <div x-show="activeTab === 'itinerary'" class="space-y-6">
+        <h3 class="text-xl font-bold text-slate-900">Rencana Perjalanan Full Day</h3>
+
+        <div class="space-y-6">
+          <!-- Pagi -->
+          <div class="bg-slate-50 rounded-2xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                <i class="fas fa-sun"></i>
+              </div>
+              <h4 class="font-semibold text-slate-900">Pagi Hari (08:00 - 11:30)</h4>
+            </div>
+            <div class="space-y-3 text-slate-600 text-sm">
+              <div class="flex items-start gap-3">
+                <i class="fas fa-car text-primary mt-1"></i>
+                <p><span class="font-medium">08:00</span> – Penjemputan di hotel area Mataram / Senggigi / Bandara</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-route text-primary mt-1"></i>
+                <p><span class="font-medium">09:00</span> – Tiba di Desa Sade, tur keliling desa bersama local guide</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-mug-hot text-primary mt-1"></i>
+                <p><span class="font-medium">10:30</span> – Waktu bebas foto &amp; beli souvenir lokal</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Siang -->
+          <div class="bg-slate-50 rounded-2xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-8 h-8 bg-yellow-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                <i class="fas fa-sun"></i>
+              </div>
+              <h4 class="font-semibold text-slate-900">Siang Hari (11:30 - 15:00)</h4>
+            </div>
+            <div class="space-y-3 text-slate-600 text-sm">
+              <div class="flex items-start gap-3">
+                <i class="fas fa-car text-primary mt-1"></i>
+                <p><span class="font-medium">11:30</span> – Berangkat ke Sukarare Village</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-swatchbook text-primary mt-1"></i>
+                <p><span class="font-medium">12:00</span> – Melihat proses tenun dan mencoba memakai kain tradisional</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-utensils text-primary mt-1"></i>
+                <p><span class="font-medium">13:00</span> – Makan siang di sekitar Kuta Lombok (biaya sendiri)</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-umbrella-beach text-primary mt-1"></i>
+                <p><span class="font-medium">14:00</span> – Explore pantai Kuta &amp; sekitarnya</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sore -->
+          <div class="bg-slate-50 rounded-2xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                <i class="fas fa-moon"></i>
+              </div>
+              <h4 class="font-semibold text-slate-900">Sore Hari (15:00 - 17:00)</h4>
+            </div>
+            <div class="space-y-3 text-slate-600 text-sm">
+              <div class="flex items-start gap-3">
+                <i class="fas fa-mountain-sun text-primary mt-1"></i>
+                <p><span class="font-medium">15:00</span> – Opsional: singgah ke Tanjung Aan / Bukit Merese (jika cuaca mendukung)</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-car text-primary mt-1"></i>
+                <p><span class="font-medium">16:00</span> – Perjalanan kembali ke hotel</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-home text-primary mt-1"></i>
+                <p><span class="font-medium">17:00</span> – Tiba di hotel &amp; trip selesai</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Included -->
+      <div x-show="activeTab === 'included'" class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-4">
+            <h4 class="font-semibold text-slate-900">Yang Termasuk</h4>
+            <ul class="space-y-3 text-slate-600 text-sm">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check text-emerald-500 mt-1"></i>
+                <span>Transportasi AC untuk seluruh rute tour</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check text-emerald-500 mt-1"></i>
+                <span>Semua tiket masuk objek wisata di itinerary</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check text-emerald-500 mt-1"></i>
+                <span>Local guide di desa adat (Sade / Sukarare)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check text-emerald-500 mt-1"></i>
+                <span>Driver berpengalaman &amp; ramah</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-4">
+            <h4 class="font-semibold text-slate-900">Tidak Termasuk</h4>
+            <ul class="space-y-3 text-slate-600 text-sm">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-times text-red-500 mt-1"></i>
+                <span>Makan &amp; minum selama tour</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-times text-red-500 mt-1"></i>
+                <span>Belanja souvenir / kain tenun</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-times text-red-500 mt-1"></i>
+                <span>Tip untuk guide &amp; driver (opsional)</span>
+              </li>
+            </ul>
+
+            <div class="bg-blue-50 rounded-xl p-4 mt-4">
+              <h5 class="font-semibold text-blue-900 text-sm mb-2">Tips &amp; Saran</h5>
+              <ul class="text-xs text-blue-700 space-y-1">
+                <li>• Pakai pakaian yang sopan saat masuk desa adat</li>
+                <li>• Bawa topi / payung kecil untuk cuaca panas</li>
+                <li>• Siapkan uang cash kecil untuk belanja souvenir</li>
+                <li>• Gunakan sandal/sepatu yang nyaman untuk jalan kaki</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews -->
+      <div x-show="activeTab === 'reviews'" class="space-y-6">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-slate-900">4.8</div>
+            <div class="flex justify-center text-amber-400 text-sm">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="text-xs text-slate-500 mt-1">54 reviews</div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Review 1 -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 card-shadow">
+            <div class="flex items-start justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://randomuser.me/api/portraits/women/52.jpg"
+                  class="w-10 h-10 rounded-full object-cover"
+                  alt="Foto tamu"
+                >
+                <div>
+                  <h5 class="font-semibold text-slate-900">Maya Pratiwi</h5>
+                  <div class="flex items-center gap-1 text-sm text-amber-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <span class="text-sm text-slate-500">2 minggu lalu</span>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Seru banget bisa lihat langsung rumah adat Sasak dan proses tenun. Guide-nya jelasin sejarah
+              dengan bahasa yang gampang dimengerti. Anak-anak juga senang diajak ke pantai Kuta di akhir trip.
+            </p>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 card-shadow">
+            <div class="flex items-start justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://randomuser.me/api/portraits/men/24.jpg"
+                  class="w-10 h-10 rounded-full object-cover"
+                  alt="Foto tamu"
+                >
+                <div>
+                  <h5 class="font-semibold text-slate-900">Doni Saputra</h5>
+                  <div class="flex items-center gap-1 text-sm text-amber-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+              </div>
+              <span class="text-sm text-slate-500">1 bulan lalu</span>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Paketnya murah tapi isinya padat. Mobil bersih, driver on time, dan itinerary-nya nggak bikin capek.
+              Cocok banget buat hari pertama di Lombok sebelum island hopping.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-14 bg-primary">
+    <div class="max-w-6xl mx-auto section-padding text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+        Mau Kenal Lombok Lewat Budayanya?
+      </h2>
+      <p class="text-blue-100 mb-8 max-w-2xl mx-auto text-sm md:text-base">
+        Sasak Tour pas banget untuk kamu yang ingin lihat langsung kehidupan suku Sasak, tenun tradisional,
+        dan pantai Kuta dalam satu hari perjalanan yang tertata.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#booking"
+          class="inline-flex items-center justify-center gap-2 bg-white text-primary font-semibold px-6 py-3 rounded-lg hover:bg-slate-100 transition shadow-md text-sm"
+        >
+          <i class="fas fa-calendar-check"></i>
+          Lihat Detail Paket
+        </a>
+        <a
+          href="https://wa.me/+6281936800190?text=Halo%20Afwa%20Transport,%20saya%20ingin%20tanya%20Sasak%20Tour."
+          target="_blank"
+          class="inline-flex items-center justify-center gap-2 border border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition text-sm"
+        >
+          <i class="fab fa-whatsapp"></i>
+          Chat via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-12 pb-8 bg-white border-t border-slate-200 mt-10 section-padding" id="footer">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-8 mb-10">
+        <!-- Brand Information -->
+        <div class="md:col-span-2 space-y-3" data-aos="fade-up">
+          <div class="flex items-center gap-2">
+            <span class="text-lg font-bold text-slate-900">
+              <img class="w-9 h-9 text-white rounded-lg flex items-center justify-center" src="../img/logo.png" alt="">
+            </span>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Local travel partner untuk jelajah Lombok: paket wisata, sewa mobil, dan itinerary custom.
+          </p>
+          <p class="text-xs text-slate-400">
+            Office: Selong Belanak, Lombok Tengah – Nusa Tenggara Barat
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-sm font-semibold text-slate-900 mb-3">Navigasi</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../index.html" class="text-slate-500 hover:text-primary transition">Home</a></li>
+            <li><a href="../index.html#destinations" class="text-slate-500 hover:text-primary transition">Destinasi</a></li>
+            <li><a href="../index.html#rental" class="text-slate-500 hover:text-primary transition">Sewa Mobil</a></li>
+            <li><a href="../index.html#about" class="text-slate-500 hover:text-primary transition">Tentang</a></li>
+            <li><a href="../index.html#faq" class="text-slate-500 hover:text-primary transition">FAQ</a></li>
+            <li><a href="../index.html#footer" class="text-slate-500 hover:text-primary transition">Kontak</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information + Map -->
+        <div data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-sm font-semibold text-slate-900 mb-3">Kontak & Jam</h3>
+          <address class="not-italic">
+            <ul class="space-y-2 text-sm text-slate-500">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-phone text-primary text-xs" aria-hidden="true"></i>
+                <span>+6281936800190</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-envelope text-primary text-xs" aria-hidden="true"></i>
+                <span>Lalulis.adiarta@icloud.com</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-clock text-primary text-xs mt-1" aria-hidden="true"></i>
+                <span>Senin – Minggu<br>08.00 – 21.00 WITA</span>
+              </li>
+            </ul>
+          </address>
+
+          <div class="flex gap-3 mt-3">
+            <a href="https://www.instagram.com/afwatransport.lombok15/" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition" aria-label="Instagram">
+              <i class="fab fa-instagram text-sm" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition" aria-label="Facebook">
+              <i class="fab fa-facebook-f text-sm" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/+6281936800190?text=Halo%20Afwa%20Transport" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp text-sm" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <!-- Map -->
+          <div class="mt-4">
+            <h4 class="text-xs font-semibold text-slate-900 mb-2">Lokasi Kami</h4>
+            <div class="w-full h-40 rounded-xl overflow-hidden border border-slate-200">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.1247991819423!2d116.16846629999998!3d-8.867972500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcda7a6df0cc621%3A0x85fc5935f0720c5c!2sAfwa%20homestay%20and%20transport%20Selong%20belanak!5e0!3m2!1sid!2sid!4v1763648616071!5m2!1sid!2sid"
+                title="Lokasi Kami (Peta Google)"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-slate-200 pt-5 flex flex-col md:flex-row items-center justify-between gap-4" data-aos="fade-up">
+        <p class="text-xs text-slate-500">© <span id="year"></span> Afwa Transport. All rights reserved.</p>
+        <p class="text-xs text-slate-400">Made for travelers to Lombok • Local guided trips</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100,
+    });
+  </script>
+</body>
+</html>
