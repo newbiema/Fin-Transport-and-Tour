@@ -4,7 +4,7 @@ export const contact = {
   email: 'riancipol7@gmail.com',
   address: 'Gerupuk, Desa Sengkol, Kecamatan Pujut, Lombok Tengah',
   social: {
-    facebook: 'https://www.facebook.com/search/top/?q=Jefry%20Ramdan%20Z',
+    facebook: 'https://www.facebook.com/jefry.synyter',
     instagram: 'https://www.instagram.com/jefry_sn/',
   },
 };
