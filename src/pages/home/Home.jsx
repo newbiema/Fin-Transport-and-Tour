@@ -10,12 +10,6 @@ const features = [
   ['fa-headset', 'Bantuan yang responsif', 'Tim kami siap membantu dari konsultasi hingga perjalanan selesai.'],
 ];
 
-const rentals = [
-  ['/images/vehicles/avanza.jpg', 'Mobil Toyota Avanza', 'Mulai Rp600.000/hari', 'fa-car'],
-  ['/images/vehicles/big scooter.jpg', 'Big Scooter', 'Mulai Rp150.000/hari', 'fa-motorcycle'],
-  ['/images/vehicles/small scotter.jpg', 'Small Scooter', 'Mulai Rp100.000/hari', 'fa-motorcycle'],
-];
-
 export default function Home() {
   return <><Header /><main>
     <section id="home" className="pt-16 border-b border-slate-200">
@@ -23,7 +17,7 @@ export default function Home() {
         <div>
           <p className="text-primary text-xs tracking-[.18em] ">fintransportandtour.com</p>
           <h1 className="hero-title text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight mt-4">Jelajah Lombok dengan lebih nyaman.</h1>
-          <p className="text-slate-600 leading-7 mt-5 max-w-xl">Private tour, island hopping, rental kendaraan, dan itinerary custom bersama partner lokal yang memahami Lombok.</p>
+          <p className="text-slate-600 leading-7 mt-5 max-w-xl">Private tour, island hopping, dan itinerary custom bersama partner lokal yang memahami Lombok.</p>
           <div className="flex flex-wrap gap-3 mt-7"><a href="#destinations" className="inline-flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-lg text-sm font-bold hover:bg-slate-900 transition"><i className="fas fa-map-marked-alt" /> Lihat paket</a><a href={whatsapp()} className="inline-flex items-center gap-2 border border-slate-300 text-slate-800 px-5 py-3 rounded-lg text-sm font-bold hover:border-primary hover:text-primary transition"><i className="fab fa-whatsapp text-primary" /> Hubungi admin</a></div>
           <div className="grid grid-cols-3 gap-5 mt-10 pt-7 border-t border-slate-200"><div><p className="font-bold text-slate-900">Lokal</p><p className="text-xs text-slate-500 mt-1">Tim Lombok</p></div><div><p className="font-bold text-slate-900">Private</p><p className="text-xs text-slate-500 mt-1">Trip fleksibel</p></div><div><p className="font-bold text-slate-900">Setiap hari</p><p className="text-xs text-slate-500 mt-1">08.00–21.00</p></div></div>
         </div>
