@@ -10,7 +10,7 @@ export const tours = [
     description: 'Private snorkeling trip ke Gili Nanggu, Gili Sudak, dan Gili Kedis dengan laut tenang dan pasir putih.',
     duration: 'Full day · 08.00–17.00 WITA',
     includes: ['Transportasi AC door-to-door', 'Private boat', 'Peralatan snorkeling', 'Tiket masuk'],
-    itinerary: ['Penjemputan dari hotel', 'Boat menuju Gili Nanggu', 'Snorkeling di Gili Sudak', 'Makan siang dan waktu santai di Gili Kedis', 'Kembali ke hotel'],
+    itinerary: ['Penjemputan dari hotel', 'Boat menuju Gili Nanggu', 'Snorkeling di Gili Sudak', 'Santai di Gili Kedis', 'Kembali ke hotel'],
   },
   {
     slug: 'gili-islands',
@@ -51,4 +51,66 @@ export const tours = [
     includes: ['Transport AC', 'Tiket masuk', 'Local guide', 'Air mineral'],
     itinerary: ['Penjemputan hotel', 'Trekking Benang Stokel', 'Eksplor Benang Kelambu', 'Istirahat dan makan siang', 'Kembali ke hotel'],
   },
+
+  {
+  slug: 'gili-lampu-kondo-pasir',
+  title: 'Gili Lampu, Gili Kondo & Gili Pasir',
+  tag: 'Island Hopping',
+  icon: 'fa-ship',
+  price: 'Rp2.000.000',
+  image: '/images/gili_pasir.jpg',
+  gallery: [
+    '/images/gili_lampu_trip/gili_lampu.webp',
+    '/images/gili_lampu_trip/gili_kondo.webp',
+  ],
+  description: 'Private island hopping trip ke Gili Lampu, Gili Kondo, dan Gili Pasir dengan pantai pasir putih dan suasana pulau yang tenang.',
+  duration: 'Full day',
+  includes: [
+    'Private boat',
+    'Transportasi',
+    'Air mineral'
+  ],
+  itinerary: [
+    'Penjemputan dari hotel',
+    'Menuju pelabuhan',
+    'Boat menuju Gili Lampu',
+    'Eksplorasi Gili Kondo',
+    'Menikmati pasir putih Gili Pasir',
+    'Kembali ke Lombok'
+  ],
+},
+
+
+{
+  slug: 'pink-beach-trip',
+  title: 'Pink Beach Trip',
+  tag: 'Beach & Snorkeling',
+  icon: 'fa-person-swimming',
+  price: 'Rp2.000.000',
+  image: '/images/pink_beach.jpg',
+  gallery: [
+    '/images/pink_beach_trip/pink_beach_2.jpeg',
+    '/images/pink_beach_trip/gili_petelu.jpg',
+    '/images/pink_beach_trip/gili_gambir.jpg'
+  ],
+  description: 'Explore Pink Beach 1, Pink Beach 2, Pink Beach 3, Gili Petelu, dan Gili Gambir dengan dua kali pengalaman snorkeling bersama guide lokal.',
+  duration: 'Full day',
+  includes: [
+    'Boat',
+    'Peralatan snorkeling',
+    'Local guide',
+    '2x snorkeling'
+  ],
+  itinerary: [
+    'Penjemputan dari hotel',
+    'Menuju Pink Beach',
+    'Explore Pink Beach 1',
+    'Explore Pink Beach 2 & Pink Beach 3',
+    'Snorkeling pertama',
+    'Menuju Gili Petelu',
+    'Snorkeling kedua',
+    'Explore Gili Gambir',
+    'Kembali ke Lombok'
+  ],
+},
 ];

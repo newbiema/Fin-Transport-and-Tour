@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { whatsapp } from '../../shared/config/contact';
 
 const links = [
-  ['Home', '/#home'], ['Destinasi', '/#destinations'], ['Sewa Mobil', '/#rental'], ['Tentang', '/#about'], ['Kontak', '/#footer'],
+  ['Home', '/#home'], ['Destinasi', '/#destinations'],  ['Tentang', '/#about'], ['Kontak', '/#footer'],
 ];
 
 export default function Header() {
