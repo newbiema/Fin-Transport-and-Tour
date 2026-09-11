@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from '../pages/home/Home';
 import TourDetail from '../pages/tours/TourDetail';
+import FloatingActions from '../components/layout/FloatingActions';
 
-function ScrollToTop() {
+function RouteScrollReset() {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -16,12 +17,13 @@ function ScrollToTop() {
 export default function App() {
   return (
     <>
-      <ScrollToTop />
+      <RouteScrollReset />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tour/:slug" element={<TourDetail />} />
         <Route path="*" element={<Home />} />
       </Routes>
+      <FloatingActions />
     </>
   );
 }

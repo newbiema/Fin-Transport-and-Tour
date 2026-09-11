@@ -3,8 +3,8 @@
 /* 1. Definisi Tema Khusus (Custom Theme Definitions) */
 /* Ini akan menghasilkan utilitas seperti text-primary, bg-accent, dan font-sans */
 @theme {
-  --color-primary: #1E40AF;
-  --color-accent: #0D9488;
+  --color-primary: #24516C;
+  --color-accent: #84684B;
 
   --font-sans: 'Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif';
 }
@@ -20,30 +20,21 @@ html {
 
 /* 3. Utilitas Komponen/Kustom (Custom Component/Utility Classes) */
 
-/* Navigasi dengan efek kaca (glass effect) */
 .nav-blur {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: rgba(243, 238, 229, 0.98);
 }
 
-/* Surface gelap yang sederhana untuk CTA */
 .surface-dark {
-  background: var(--color-primary);
+  background: #203b3c;
 }
 
-/* Bayangan Kartu */
-.card-shadow {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Efek Hover Kartu */
 .card-hover {
-  transition: all 0.3s ease;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
 }
 
 .card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transform: none;
+  box-shadow: none;
 }
 
 /* Animasi Menu Mobile */
