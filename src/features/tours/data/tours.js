@@ -1,4 +1,51 @@
 export const tours = [
+
+   {
+    slug: 'tetebatu-village',
+    title: 'Tetebatu Village Day Tour',
+    tag: 'Nature & Culture Tour',
+    icon: 'fa-person-hiking',
+
+    price: 'Rp500.000',
+
+    image: '/images/tetebatu.jpg',
+
+    gallery: [
+      '/images/tetebatu/tetebatu_1.jpg',
+      '/images/tetebatu/tetebatu_2.jpg',
+      '/images/tetebatu/tetebatu_3.jpg',
+      '/images/tetebatu/tetebatu_4.jpg',
+      '/images/tetebatu/tetebatu_5.jpg',
+      '/images/tetebatu/tetebatu_6.jpg',
+    ],
+
+    description:
+      'A full-day nature and cultural experience in Tetebatu Village, exploring beautiful rice terraces, local farming activities, waterfalls, tropical plantations, and the monkey forest while experiencing the warm atmosphere of local village life.',
+
+    duration: 'Full day',
+
+    includes: [
+      'Hotel pickup and drop-off from Mataram, Senggigi, Bangsal, or Kuta',
+      'Coffee time',
+      'Experienced local tour guide',
+      'Parking and entrance fees',
+      'Lunch',
+      'Mineral water',
+    ],
+
+    itinerary: [
+      'Hotel pickup',
+      'Drive to Tetebatu Village',
+      'Walk through local residential areas',
+      'Lunch',
+      'Explore terraced rice fields',
+      'Visit Tibu Duren Waterfall / Wallet Nest',
+      'Explore the monkey forest',
+      'Visit local plantations and learn about coffee, cocoa, vanilla, and other crops',
+      'Return to the hotel',
+    ],
+  },
+
   {
     slug: 'secret-gili',
     title: 'Secret Gili Trip',
@@ -25,6 +72,7 @@ export const tours = [
     includes: ['Hotel-to-harbour transfer', 'Private boat', 'Snorkeling equipment', 'Drinking water'],
     itinerary: ['Hotel pickup', 'Cross to Gili Trawangan', 'Snorkelling at Gili Meno', 'Lunch at Gili Air', 'Return to Lombok'],
   },
+  
   {
     slug: 'sasak-tour',
     title: 'Sasak Culture Tour',
